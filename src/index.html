@@ -39,11 +39,17 @@
     <article class="intro">
       <form class="search-form" id="search-form">
         <input type="text" name="query" autocomplete="off" placeholder="Search images..." />
+        <button type="submit" class="btnSerch">Search</button>
       </form>
       <div>
         <ul class="gallery">
         <!-- Список <li> с карточками изображений -->
         </ul>
+        <button type="button" class="btn btn-primary button" data-action="load-more">
+          <!-- <span class="spinner-border spinner-border-sm spinner is-hidden" role="status" aria-hidden="true"></span> -->
+        
+          <span class="label">More</span> 
+        </button>
       </div>
       <!-- <h1>Webpack starter kit</h1> -->
 
