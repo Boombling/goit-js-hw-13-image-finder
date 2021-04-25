@@ -5,9 +5,20 @@ export default class ImagesApiService {
     construct(){
         this.searchQuery = '';
         this.page = 1;
-        // this.perPage = 12;
     }
     
+    // async fetchImages() {
+    //     const url = `https://pixabay.com/api/?image_type=photo&orientation=horizontal&q=${this.searchQuery}&page=${this.page}&per_page=12&key=${API_KEY}`;
+        
+    //     const fetch = await fetch(url);
+    //     const response = await fetch.json();
+    //     const hitss = ({ hits }) => {
+    //         this.incrementPage(hits);
+    //         return hitss;
+    //     }
+
+    // }
+
     fetchImages() {
         const url = `https://pixabay.com/api/?image_type=photo&orientation=horizontal&q=${this.searchQuery}&page=${this.page}&per_page=12&key=${API_KEY}`;
         
