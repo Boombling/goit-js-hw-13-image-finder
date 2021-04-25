@@ -20,13 +20,12 @@ export default class ImagesApiService {
     // }
 
     fetchImages() {
-        const url = `https://pixabay.com/api/?image_type=photo&orientation=horizontal&q=${this.searchQuery}&page=${this.page}&per_page=12&key=${API_KEY}`;
+        const url = `${BASE_URL}/api/?image_type=photo&orientation=horizontal&q=${this.searchQuery}&page=${this.page}&per_page=12&key=${API_KEY}`;
         
         return fetch(url)
             .then(response => response.json())
             .then(({ hits }) => {
                 this.incrementPage();
-                console.log(this);
                 return hits;
             })
             .catch(error => console.error(error));
