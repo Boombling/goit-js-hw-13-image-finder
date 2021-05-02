@@ -43,10 +43,14 @@ async function onSearch(e) {
 }
 
 function renderImageList(hits) {
-     if (imagesApiService.query === '') {
+    if (imagesApiService.query === '') {
+         loadMoreBtn.hide();
          return showAlert('Invalid request. Please try again')
      }
-     
+    if (!hits.length) {
+        loadMoreBtn.hide();
+        onShowError();
+     }
     else{
          refs.cardContainer.insertAdjacentHTML('beforeend', imageCard(hits));
     }
