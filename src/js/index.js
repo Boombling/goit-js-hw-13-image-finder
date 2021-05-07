@@ -61,6 +61,7 @@ function onLoadMore() {
     loadMoreBtn.disable();
     imagesApiService.fetchImages().then(hits => {
         renderImageList(hits)
+        window.scrollBy(0, 650);
         loadMoreBtn.enable();
     });
 }
